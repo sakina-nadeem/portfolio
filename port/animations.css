@@ -1,0 +1,193 @@
+/* Base animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from { 
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from { 
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes widthGrow {
+  from { width: 0; }
+  to { width: 64px; }
+}
+
+/* Initialize animation classes */
+.fade-in, .fade-up, .fade-left, .fade-right, .scale-in {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* Apply animations when .animated class is added */
+.fade-in.animated {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-up.animated {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.fade-left.animated {
+  animation: fadeLeft 0.6s ease-out forwards;
+}
+
+.fade-right.animated {
+  animation: fadeRight 0.6s ease-out forwards;
+}
+
+.scale-in.animated {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Continuous animations */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+/* Animation delays */
+[data-delay="100"] {
+  animation-delay: 0.1s;
+}
+
+[data-delay="200"] {
+  animation-delay: 0.2s;
+}
+
+[data-delay="300"] {
+  animation-delay: 0.3s;
+}
+
+[data-delay="400"] {
+  animation-delay: 0.4s;
+}
+
+[data-delay="500"] {
+  animation-delay: 0.5s;
+}
+
+[data-delay="600"] {
+  animation-delay: 0.6s;
+}
+
+[data-delay="700"] {
+  animation-delay: 0.7s;
+}
+
+[data-delay="800"] {
+  animation-delay: 0.8s;
+}
+
+[data-delay="900"] {
+  animation-delay: 0.9s;
+}
+
+[data-delay="1000"] {
+  animation-delay: 1s;
+}
+
+/* Portfolio filtering animation */
+.portfolio-item {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Skill bar animation */
+.skill-bar-fill {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Section animation for scroll reveal */
+.section-divider {
+  animation: widthGrow 0.5s ease-out 0.2s forwards;
+  width: 0;
+}
+
+/* Grid pattern animation */
+.grid-pattern {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Hover animations */
+.btn, .service-card, .project-card, .portfolio-card, .contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure images transition smoothly */
+.project-img, .portfolio-img, .profile-img {
+  transition: transform 0.5s ease;
+}
