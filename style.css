@@ -2400,7 +2400,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-links {
   display: flex;
-  gap: 10px; /* space between icons */
+  gap: 10px;
 }
 
 .social-link {
@@ -2410,10 +2410,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 32px;
   height: 32px;
   text-decoration: none;
-  color: #0077b5; /* blue tone */
+  color: #0077b5; 
   font-size: 20px;
   background: transparent;
-  border-radius: 50%; /* optional: for round effect */
+  border-radius: 50%; 
 }
 
 .social-link i {
